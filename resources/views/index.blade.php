@@ -40,28 +40,27 @@
                 </div>
                 <div class="mt-8">
                     <button
-                        class="w-20 bg-gray-200 border border-gray-200
+                        class="justify-center w-20 bg-gray-200 border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
                         Vote
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
-                         class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <a href="">
+                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                             alt="avatar"
+                             class="w-14 h-14 rounded-xl">
+                    </a>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">Lorem ipsum dolor sit amet.</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid animi beatae commodi
-                        consectetur cumque cupiditate doloribus ducimus eaque, eligendi incidunt magnam nulla placeat,
-                        quae quaerat quibusdam quidem ratione repellendus, repudiandae rerum vel velit veritatis
-                        voluptatem. Ab adipisci dolore eaque error, exercitationem hic nam, nihil perspiciatis suscipit
-                        veritatis voluptatem voluptatum?
+                        Lorem ipsum dolor sit amet,
                     </div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
@@ -77,7 +76,7 @@
                             rounded-full text-center w-28 h-7 py-2 px-4">Open
                             </div>
                             <button
-                                class="bg-gray-100 hover:bg-gray-200 rounded-full h-7
+                                class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
                                 transition duration-250 ease-in py-2 px-4 relative">
                                 <svg fill="currentColor" width="24" height="6">
                                     <path
@@ -104,31 +103,27 @@
                 </div>
                 <div class="mt-8">
                     <button
-                        class="w-20 bg-gray-200 bg-blue text-white border border-gray-200
+                        class="justify-center w-20 bg-gray-200 bg-blue text-white border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
                         Vote
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
-                         class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <a href="">
+                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                             alt="avatar"
+                             class="w-14 h-14 rounded-xl">
+                    </a>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">Lorem ipsum dolor sit amet.</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aspernatur delectus
-                        dolore dolorem dolorum ea esse est et eum facere id illo illum impedit in laudantium magni modi,
-                        nam nisi numquam obcaecati pariatur quasi ratione reiciendis repellendus reprehenderit similique
-                        sit suscipit tempora tempore temporibus unde ut voluptatum? Ab, accusamus animi dignissimos
-                        dolorem eum iure laudantium, modi natus omnis porro praesentium qui quis repudiandae soluta sunt
-                        ut voluptates! Ad consequuntur doloribus eligendi, excepturi illum iste neque nulla porro sunt.
-                        Aliquam assumenda earum, eius eligendi est eum laborum magni non quos repudiandae tempora unde
-                        vel vero? Expedita id laborum quae sed.
+                        Lorem ipsum dolor sit amet, consectetur
                     </div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
@@ -144,7 +139,7 @@
                             rounded-full text-center w-28 h-7 py-2 px-4 bg-yellow text-white">In Progress
                             </div>
                             <button
-                                class="bg-gray-100 hover:bg-gray-200 rounded-full h-7
+                                class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
                                 transition duration-250 ease-in py-2 px-4 relative">
                                 <svg fill="currentColor" width="24" height="6">
                                     <path
@@ -171,27 +166,29 @@
                 </div>
                 <div class="mt-8">
                     <button
-                        class="w-20 bg-gray-200 border border-gray-200
+                        class="justify-center w-20 bg-gray-200 border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
                         Vote
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
-                         class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <div class="flex-none">
+                        <a href="">
+                            <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                                 alt="avatar"
+                                 class="w-14 h-14 rounded-xl">
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">Lorem ipsum dolor sit amet.</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet aspernatur assumenda corporis
-                        debitis dicta distinctio dolore dolores ea enim, impedit, laudantium maiores nihil obcaecati
-                        omnis placeat porro quae quia repellendus repudiandae, sed ut vitae. Accusamus alias eaque eum
-                        fugiat, magnam minus modi natus! Beatae eligendi et nostrum saepe voluptates?
+                        Lorem ipsum dolor sit amet
                     </div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
@@ -207,7 +204,7 @@
                             rounded-full text-center w-28 h-7 py-2 px-4 bg-red text-white">Closed
                             </div>
                             <button
-                                class="bg-gray-100 hover:bg-gray-200 rounded-full h-7
+                                class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
                                 transition duration-250 ease-in py-2 px-4 relative">
                                 <svg fill="currentColor" width="24" height="6">
                                     <path
@@ -234,27 +231,27 @@
                 </div>
                 <div class="mt-8">
                     <button
-                        class="w-20 bg-gray-200 border border-gray-200
+                        class="justify-center w-20 bg-gray-200 border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
                         Vote
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
-                         class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <a href="">
+                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                             alt="avatar"
+                             class="w-14 h-14 rounded-xl">
+                    </a>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">Lorem ipsum dolor sit amet.</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquid blanditiis consectetur
-                        cum dicta dolorum ducimus ea enim error fugiat harum in ipsa ipsum iusto magnam magni minus,
-                        molestiae necessitatibus nemo pariatur perferendis placeat porro, praesentium quasi qui rem
-                        repellat repellendus rerum saepe tempora unde vel vitae. Ab, hic.
+                        Lorem ipsum dolor sit amet,
                     </div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
@@ -270,7 +267,7 @@
                             rounded-full text-center w-28 h-7 py-2 px-4 bg-green text-white">Implemented
                             </div>
                             <button
-                                class="bg-gray-100 hover:bg-gray-200 rounded-full h-7
+                                class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
                                 transition duration-250 ease-in py-2 px-4 relative">
                                 <svg fill="currentColor" width="24" height="6">
                                     <path
