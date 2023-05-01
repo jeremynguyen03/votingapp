@@ -12,7 +12,7 @@
         <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
             <div class="flex-none mx-4">
                 <a href="">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                    <img src="{{ $idea->user->avatar }}"
                          alt="avatar"
                          class="w-14 h-14 rounded-xl">
                 </a>
@@ -246,7 +246,7 @@
             <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="#">
-                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=2" alt="avatar"
+                        <img src="{{ $idea->user->avatar }}" alt="avatar"
                              class="w-14 h-14 rounded-xl">
                     </a>
                 </div>
@@ -300,7 +300,7 @@
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="#">
-                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=3" alt="avatar"
+                        <img src="{{ $idea->user->avatar }}" alt="avatar"
                              class="w-14 h-14 rounded-xl">
                     </a>
                     <div class="text-center uppercase text-blue text-xxs font-bold mt-1">Admin</div>
@@ -345,7 +345,7 @@
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="#">
-                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=4" alt="avatar"
+                        <img src="{{ $idea->user->avatar }}" alt="avatar"
                              class="w-14 h-14 rounded-xl">
                     </a>
                 </div>
