@@ -34,6 +34,15 @@
         @foreach($ideas as $idea)
             {{-- Begin .idea-container --}}
             <div
+                x-data
+                @click="
+                    clicked = $event.target
+                    target = clicked.tagName.toLowerCase()
+                    ignores = ['button', 'svg', 'path', 'a']
+
+                    if (! ignores.includes(target)) {
+                        clicked.closest('.idea-container').querySelector('.idea-link').click()
+                    }"
                 class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-250 ease-in">
                 <div class="hidden md:block border-r border-gray-100 px-5 py-8">
                     <div class="text-center">
@@ -51,7 +60,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
                     <div class="flex-none mx-2 md:mx-0 ">
-                        <a href="">
+                        <a href="{{ route('idea.show', $idea) }}">
                             <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
                                  alt="avatar"
                                  class="w-14 h-14 rounded-xl">
@@ -59,7 +68,7 @@
                     </div>
                     <div class="md:w-full mx-2 md:mx-4 flex flex-col text-justify justify-between">
                         <h4 class="text-xl font-semibold mt-2 md:mt-0">
-                            <a href="{{ route('idea.show', $idea) }}" class="hover:underline">{{ $idea->title }}</a>
+                            <a href="{{ route('idea.show', $idea) }}" class="idea-link hover:underline">{{ $idea->title }}</a>
                         </h4>
                         <div class="text-gray-600 mt-3 line-clamp-3">
                             {{ $idea->description }}
@@ -76,9 +85,9 @@
                             <div
                                 x-data="{ isOpen: false}"
                                 class="flex items-center space-x-2 mt-4 md:mt-0">
-                                <div class="bg-gray-200 text-xxs font-bold uppercase leading-none
+                                <button class="bg-gray-200 text-xxs font-bold uppercase leading-none
                             rounded-full text-center w-28 h-7 py-2 px-4">Open
-                                </div>
+                                </button>
                                 <button
                                     @click="isOpen = !isOpen"
                                     class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
