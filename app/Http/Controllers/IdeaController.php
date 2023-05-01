@@ -6,6 +6,7 @@ use App\Http\Requests\StoreIdeaRequest;
 use App\Http\Requests\UpdateIdeaRequest;
 use App\Models\Category;
 use App\Models\Idea;
+use App\Models\Status;
 
 class IdeaController extends Controller
 {
@@ -15,7 +16,7 @@ class IdeaController extends Controller
     public function index()
     {
         return view('idea.index', [
-            'ideas' => Idea::with('user', 'category')
+            'ideas' => Idea::with('user', 'category', 'status')
                        ->simplePaginate(Idea::PAGINATION_COUNT),
             'categories' => Category::all()
         ]);
@@ -43,7 +44,8 @@ class IdeaController extends Controller
     public function show(Idea $idea)
     {
         return view('idea.show', [
-            'idea' => $idea
+            'idea' => $idea,
+            'statuses' => Status::all()
         ]);
     }
 

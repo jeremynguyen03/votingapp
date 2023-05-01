@@ -39,9 +39,7 @@
                         x-data="{ isOpen: false}"
                         class="flex items-center space-x-2 mt-4 md:mt-0"
                     >
-                        <div class="bg-gray-200 text-xxs font-bold uppercase leading-none
-                            rounded-full text-center w-28 h-7 py-2 px-4 bg-yellow text-white">In Progress
-                        </div>
+                        <div class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4 {{ $idea->status->classes }}">{{ $idea->status->name }}</div>
                         <button
                             @click="isOpen = !isOpen"
                             class="justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-full h-7
@@ -163,36 +161,17 @@
                 >
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div class="space-y-2">
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="bg-gray-200 text-gray-600 border-none" name="status" value="1" checked>
-                                    <span class="ml-2">Open</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="bg-gray-200 text-purple border-none" name="status" value="2">
-                                    <span class="ml-2">Considering</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="bg-gray-200 text-yellow border-none" name="status" value="3">
-                                    <span class="ml-2">In Progress</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="bg-gray-200 text-green border-none" name="status" value="3">
-                                    <span class="ml-2">Implemented</span>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="bg-gray-200 text-red border-none" name="status" value="3">
-                                    <span class="ml-2">Closed</span>
-                                </label>
-                            </div>
+                            @foreach($statuses as $status)
+                                <div>
+                                    <label class="inline-flex items-center">
+                                        <input class="bg-gray-200 text-gray-600 border-none"
+                                               type="radio"
+                                               name="status"
+                                               value="{{ $status->id }}" checked>
+                                        <span class="ml-2">{{ $status->name }}</span>
+                                    </label>
+                                </div>
+                            @endforeach
                         </div>
 
                         <div>

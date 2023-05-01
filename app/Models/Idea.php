@@ -20,6 +20,7 @@ class Idea extends Model
             ]
         ];
     }
+
     protected $guarded = [];
 
     public function user()
@@ -29,6 +30,11 @@ class Idea extends Model
 
     public function category()
     {
-        return $this->belongsTo(related: Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
     }
 }

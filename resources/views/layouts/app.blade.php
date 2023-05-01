@@ -76,10 +76,13 @@
                     <select name="category_add"
                             id="category_add"
                             class="text-sm w-full bg-gray-100 border-none rounded-xl px-4 py-2">
-                        <option value="Category One">Category One</option>
-                        <option value="Category One">Category Two</option>
-                        <option value="Category One">Category Three</option>
-                        <option value="Category One">Category Four</option>
+                        <option value="1">Category 1</option>--}}
+                        <option value="1">Category 2</option>--}}
+                        <option value="1">Category 3</option>--}}
+                        <option value="1">Category 4</option>--}}
+{{--                        @foreach($categories as $category)--}}
+{{--                            <option value="{{ $category->id }}">{{ $category->name }}</option>--}}
+{{--                        @endforeach--}}
                     </select>
                 </div>
                 <div>
