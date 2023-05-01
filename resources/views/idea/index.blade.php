@@ -3,10 +3,9 @@
     <div class="filters flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
         <div class="w-full md:w-1/3">
             <select name="category" id="category" class="w-full border-none rounded-xl px-4 py-2">
-                <option value="Category One">Category One</option>
-                <option value="Category One">Category Two</option>
-                <option value="Category One">Category Three</option>
-                <option value="Category One">Category Four</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
         <div class="w-full md:w-1/3">
@@ -77,7 +76,7 @@
                             <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                                 <div>{{ $idea->created_at->diffForHumans() }}</div>
                                 <div>&bull;</div>
-                                <div>Category One</div>
+                                <div>{{ $idea->category->name }}</div>
                                 <div>&bull;</div>
                                 <div class="text-gray-900">3 comments</div>
                             </div>

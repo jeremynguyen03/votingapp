@@ -19,7 +19,7 @@
             </div>
             <div class="md:w-full mx-2 md:mx-4 text-justify">
                 <h4 class="text-xl font-semibold">
-                    <a href="{{ route('idea.show', $idea->id) }}" class="hover:underline">{{ $idea->title }}</a>
+                    <a href="{{ route('idea.show', $idea) }}" class="hover:underline">{{ $idea->title }}</a>
                 </h4>
                 <div class="text-gray-600 mt-3">
                     {{ $idea->description }}
@@ -30,7 +30,7 @@
                         <div class="hidden md:block">&bull;</div>
                         <div>{{ $idea->created_at->diffForHumans() }}</div>
                         <div>&bull;</div>
-                        <div>Category One</div>
+                        <div>{{ $idea->category->name }}</div>
                         <div>&bull;</div>
                         <div class="text-gray-900">3 comments</div>
                     </div>
