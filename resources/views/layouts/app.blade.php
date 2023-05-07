@@ -45,11 +45,11 @@
                 @endauth
             </div>
         @endif
-        <a href="">
-            <img src="https://www.gravatar.com/avatar/0000000000000000000000?d=mp&f=y"
-                 alt="avatar"
-                 class="w-10 h-10 rounded-full">
-        </a>
+        @auth
+            <a href="">
+                <img src="{{ auth()->user()->avatar }}" alt="avatar" class="w-10 h-10 rounded-full">
+            </a>
+        @endauth
     </div>
 </header>
 

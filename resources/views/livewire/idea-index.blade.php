@@ -2,13 +2,13 @@
 <div
     x-data
     @click="
-                    clicked = $event.target
-                    target = clicked.tagName.toLowerCase()
-                    ignores = ['button', 'svg', 'path', 'a']
+            clicked = $event.target
+            target = clicked.tagName.toLowerCase()
+            ignores = ['button', 'svg', 'path', 'a']
 
-                    if (! ignores.includes(target)) {
-                        clicked.closest('.idea-container').querySelector('.idea-link').click()
-                    }"
+            if (! ignores.includes(target)) {
+                clicked.closest('.idea-container').querySelector('.idea-link').click()
+            }"
     class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-250 ease-in">
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="text-center">
