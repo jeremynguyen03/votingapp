@@ -18,6 +18,7 @@
         <div class="mt-8">
             @if($hasVoted)
                 <button
+                    wire:click.prevent="vote"
                     class="justify-center w-20 bg-blue text-white border border-blue
                         hover:border-blue-hover transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
@@ -25,6 +26,7 @@
                 </button>
             @else
                 <button
+                    wire:click.prevent="vote"
                     class="justify-center w-20 bg-gray-200 border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">

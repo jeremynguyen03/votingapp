@@ -78,7 +78,7 @@ class ShowIdeasTest extends TestCase
     public function idea_pagination_works()
     {
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['id' => 2, 'name' => 'Open', 'classes' => 'bg-gray-200']);
         $statusClosed = Status::factory()->create(['name' => 'Close', 'classes' => 'bg-red text-white']);
 
         Idea::factory(Idea::PAGINATION_COUNT + 1)->create([
