@@ -12,16 +12,25 @@
     class="idea-container bg-white rounded-xl flex hover:shadow-card cursor-pointer transition duration-250 ease-in">
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="text-center">
-            <div class="font-semibold text-2xl">{{ $votesCount }}</div>
+            <div class="font-semibold text-2xl @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
             <div class="text-gray-500">Votes</div>
         </div>
         <div class="mt-8">
-            <button
-                class="justify-center w-20 bg-gray-200 border border-gray-200
+            @if($hasVoted)
+                <button
+                    class="justify-center w-20 bg-blue text-white border border-blue
+                        hover:border-blue-hover transition duration-250 ease-in
+                        font-bold text-xss uppercase rounded-xl px-4 py-3">
+                    Voted
+                </button>
+            @else
+                <button
+                    class="justify-center w-20 bg-gray-200 border border-gray-200
                         hover:border-gray-400 transition duration-250 ease-in
                         font-bold text-xss uppercase rounded-xl px-4 py-3">
-                Vote
-            </button>
+                    Vote
+                </button>
+            @endif
         </div>
     </div>
     <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
@@ -83,15 +92,24 @@
 
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
                     <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">
-                        <div class="text-sm font-bold leading-none">{{ $votesCount }}</div>
-                        <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
+                        <div class="text-sm font-bold leading-none @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
+                        <div class="text-xxs font-semibold leading-none">Votes</div>
                     </div>
+                    @if($hasVoted)
                     <button
-                        class="h-10 w-20 bg-gray-200 border border-gray-200 font-bold
+                        class="h-10 w-20 bg-blue text-white border border-blue font-bold
+                                        uppercase rounded-xl text-xss px-4 py-2 -mx-5
+                                        hover:border-blue-hover transition duration-250 ease-in">
+                        Voted
+                    </button>
+                    @else
+                        <button
+                            class="h-10 w-20 bg-gray-200 border border-gray-200 font-bold
                                         uppercase rounded-xl text-xss px-4 py-2 -mx-5
                                         hover:border-gray-400 transition duration-250 ease-in">
-                        Vote
-                    </button>
+                            Vote
+                        </button>
+                    @endif
                 </div>
             </div>
         </div>

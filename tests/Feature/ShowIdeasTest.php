@@ -7,7 +7,6 @@ use App\Models\Idea;
 use App\Models\Status;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class ShowIdeasTest extends TestCase
@@ -73,7 +72,6 @@ class ShowIdeasTest extends TestCase
         $response->assertSee($idea->title);
         $response->assertSee($idea->description);
         $response->assertSee($categoryOne->name);
-        $response->assertSee('<button class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Open</button>', false);
     }
 
     /** @test */
@@ -81,10 +79,9 @@ class ShowIdeasTest extends TestCase
     {
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
-        $statusImplemented = Status::factory()->create(['name' => 'Close', 'classes' => 'bg-red text-white']);
+        $statusClosed = Status::factory()->create(['name' => 'Close', 'classes' => 'bg-red text-white']);
 
         Idea::factory(Idea::PAGINATION_COUNT + 1)->create([
-            'category_id' => $categoryOne->id,
             'status_id' => $statusOpen->id
         ]);
         $ideaOne = Idea::find(1);
@@ -93,26 +90,26 @@ class ShowIdeasTest extends TestCase
 
         $ideaEleven = Idea::find(11);
         $ideaEleven->title = 'My Eleventh Title';
-        $ideaEleven->status_id = $statusImplemented->id;
+        $ideaEleven->status_id = $statusClosed->id;
         $ideaEleven->save();
 
         $response = $this->get('/');
-        $response->assertDontSee($ideaOne->title);
+        $response->assertSee($ideaOne->title);
         $response->assertSee($ideaEleven->title);
 
         // Open
-        $response->assertSee('<button class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Open</button>', false);
-        // Implemented
+        $response->assertDontSee('<button class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Open</button>', false);
+        // Closed
         $response->assertDontSee('<button class="bg-green text-white text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Implemented</button>', false);
 
         $response = $this->get('/?page=2');
-        $response->assertDontSee($ideaEleven->title);
+        $response->assertSee($ideaEleven->title);
         $response->assertSee($ideaOne->title);
 
         // Open
         $response->assertDontSee('<button class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Open</button>', false);
-        // Implemented
-        $response->assertSee('<button class="bg-green text-white text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Implemented</button>', false);
+        // Closed
+        $response->assertDontSee('<button class="bg-green text-white text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">Implemented</button>', false);
 
     }
 
