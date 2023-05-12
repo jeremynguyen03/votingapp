@@ -75,7 +75,7 @@
             @else
                 <div class="my-6 text-center">
                     <a href="{{ route('login') }}"
-                            class="inline-block justify-center content-center items-center w-1/2 h-11 text-xs bg-blue text-white
+                       class="inline-block justify-center content-center items-center w-1/2 h-11 text-xs bg-blue text-white
                             font-semibold rounded-xl border border-blue hover:bg-blue-hover
                             transition duration-150 ease-in px-6 py-3">Login</a>
                     <a href="{{ route('register') }}"
@@ -88,37 +88,7 @@
         </div>
     </div>
     <div class="w-full px-2 md:px-0 md:w-175">
-        <nav class="hidden md:flex items-center justify-between text-xs">
-            <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                <li class="">
-                    <a href="" class="border-b-4 pb-3 border-blue">All Ideas (87)</a>
-                </li>
-                <li class="">
-                    <a href=""
-                       class="text-gray-400 transition duration-250 ease-in border-b-4 pb-3 hover:border-blue">Considering
-                        (6)</a>
-                </li>
-                <li class="">
-                    <a href=""
-                       class="text-gray-400 transition duration-250 ease-in border-b-4 pb-3 hover:border-blue">In
-                        Progress (1)</a>
-                </li>
-            </ul>
-
-            <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                <li class="">
-                    <a href=""
-                       class="text-gray-400 transition duration-250 ease-in border-b-4 pb-3 hover:border-blue">Implemented
-                        (10)</a>
-                </li>
-                <li class="">
-                    <a href=""
-                       class="text-gray-400 transition duration-250 ease-in border-b-4 pb-3 hover:border-blue">Closed
-                        (55)</a>
-                </li>
-            </ul>
-        </nav>
-
+        <livewire:status-filters/>
         <div class="mt-8">
             {{ $slot }}
         </div>
